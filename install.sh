@@ -7,3 +7,6 @@ sudo apt-get install git-lfs
 
 pip install -e ./ml-agents/ml-agents-envs
 pip install -e ./ml-agents/ml-agents
+
+ mkdir -p ml-agents/training-envs-executables/
+ cp SoccerTwos/SoccerTwos.x86_64 ml-agents/training-envs-executables/SoccerTwos
