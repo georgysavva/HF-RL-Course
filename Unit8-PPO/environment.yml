@@ -2,5 +2,7 @@ name: hf-rl-course-unit8
 channels:
   - defaults
   - conda-forge
+dependencies:
+  - python=3.10
 
 prefix: /home/georgy/miniconda3/envs/hf-rl-course-unit8

@@ -1,0 +1,22 @@
+[tool.poetry]
+name = "unit8-ppo"
+version = "0.1.0"
+description = ""
+authors = ["Georgy Savva <georgy.savva@nyu.edu>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+pyglet = "1.5"
+pyvirtualdisplay = "^3.0"
+torch = "^2.3.1"
+gym = {version = "0.22", extras = ["box2d"]}
+imageio-ffmpeg = "^0.5.1"
+huggingface-hub = "^0.23.4"
+swig = "^4.2.1"
+
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
