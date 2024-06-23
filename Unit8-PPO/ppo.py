@@ -17,6 +17,7 @@ import torch.nn as nn
 import torch.optim as optim
 from huggingface_hub import HfApi, upload_folder
 from huggingface_hub.repocard import metadata_eval_result, metadata_save
+from pyvirtualdisplay import Display
 from torch.distributions.categorical import Categorical
 from torch.utils.tensorboard import SummaryWriter
 from wasabi import Printer
@@ -41,7 +42,7 @@ def parse_args():
         help="the wandb's project name")
     parser.add_argument("--wandb-entity", type=str, default=None,
         help="the entity (team) of wandb's project")
-    parser.add_argument("--capture-video", type=lambda x: bool(strtobool(x)), default=False, nargs="?", const=True,
+    parser.add_argument("--capture-video", type=lambda x: bool(strtobool(x)), default=True, nargs="?", const=True,
         help="weather to capture videos of the agent performances (check out `videos` folder)")
 
     # Algorithm specific arguments
@@ -337,8 +338,24 @@ def _add_logdir(local_path: Path, logdir: Path):
         shutil.copytree(logdir, repo_logdir)
 
 
+def make_env(env_id, capture_video, run_name):
+    def _thunk():
+        env = gym.make(env_id)
+        env = gym.wrappers.RecordEpisodeStatistics(env)
+        if capture_video:
+            env = gym.wrappers.RecordVideo(
+                env, f"videos/{run_name}", episode_trigger=lambda x: x % 100 == 0
+            )
+        return env
+
+    return _thunk
+
+
 if __name__ == "__main__":
     args = parse_args()
+    print(args)
+    virtual_display = Display(visible=0, size=(1400, 900))
+    virtual_display.start()
     run_name = f"{args.env_id}__{args.exp_name}__{args.seed}__{int(time.time())}"
     if args.track:
         import wandb
@@ -367,12 +384,27 @@ if __name__ == "__main__":
 
     device = torch.device("cuda" if torch.cuda.is_available() and args.cuda else "cpu")
 
-    eval_env = gym.make(args.env_id)
-
-    package_to_hub(
-        repo_id=args.repo_id,
-        model=agent,  # The model we want to save
-        hyperparameters=args,
-        eval_env=gym.make(args.env_id),
-        logs=f"runs/{run_name}",
+    # env = gym.make(args.env_id)
+    # env = gym.wrappers.RecordEpisodeStatistics(env)
+    # env = gym.wrappers.RecordVideo(env, f"videos/{run_name}")
+    # obs = env.reset()
+    # for _ in range(200):
+    #     action = env.action_space.sample()
+    #     obs, reward, done, info = env.step(action)
+    #     if done:
+    #         env.reset()
+    #         print("episodic return:", info["episode"]["r"])
+    # env.close()
+    envs = gym.vector.SyncVectorEnv(
+        [make_env(args.env_id, args.capture_video, run_name)]
     )
+
+    # eval_env = gym.make(args.env_id)
+
+    # package_to_hub(
+    #     repo_id=args.repo_id,
+    #     model=agent,  # The model we want to save
+    #     hyperparameters=args,
+    #     eval_env=gym.make(args.env_id),
+    #     logs=f"runs/{run_name}",
+    # )
