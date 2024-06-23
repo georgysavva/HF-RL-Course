@@ -1,0 +1,6 @@
+name: hf-rl-course-unit8
+channels:
+  - defaults
+  - conda-forge
+
+prefix: /home/georgy/miniconda3/envs/hf-rl-course-unit8
