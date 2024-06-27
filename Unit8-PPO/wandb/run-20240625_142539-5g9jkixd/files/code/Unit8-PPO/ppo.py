@@ -10,7 +10,6 @@ from distutils.util import strtobool
 from pathlib import Path
 
 import gym
-import gym.spaces
 import imageio
 import numpy as np
 import torch
@@ -49,7 +48,7 @@ def parse_args():
     # Algorithm specific arguments
     parser.add_argument("--env-id", type=str, default="CartPole-v1",
         help="the id of the environment")
-    parser.add_argument("--total-timesteps", type=int, default=25000,
+    parser.add_argument("--total-timesteps", type=int, default=50000,
         help="total timesteps of the experiments")
     parser.add_argument("--learning-rate", type=float, default=2.5e-4,
         help="the learning rate of the optimizer")
@@ -339,68 +338,17 @@ def _add_logdir(local_path: Path, logdir: Path):
         shutil.copytree(logdir, repo_logdir)
 
 
-def make_env(env_id, seed, idx, capture_video, run_name):
+def make_env(env_id, capture_video, run_name):
     def _thunk():
         env = gym.make(env_id)
         env = gym.wrappers.RecordEpisodeStatistics(env)
         if capture_video:
-            if idx == 0:
-                env = gym.wrappers.RecordVideo(
-                    env, f"videos/{run_name}", episode_trigger=lambda x: x % 1000 == 0
-                )
-        env.seed(seed)
-        env.action_space.seed(seed)
-        env.observation_space.seed(seed)
+            env = gym.wrappers.RecordVideo(
+                env, f"videos/{run_name}", episode_trigger=lambda x: x % 100 == 0
+            )
         return env
 
     return _thunk
-
-
-def layer_init(layer, std=np.sqrt(2), bias_const=0.0):
-    torch.nn.init.orthogonal_(layer.weight, gain=std)
-    torch.nn.init.constant_(layer.bias, bias_const)
-    return layer
-
-
-class Agent(nn.Module):
-    def __init__(self, envs):
-        super(Agent, self).__init__()
-        self.envs = envs
-        self.critic = nn.Sequential(
-            layer_init(
-                nn.Linear(np.array(envs.single_observation_space.shape).prod(), 64)
-            ),
-            nn.Tanh(),
-            layer_init(nn.Linear(64, 64)),
-            nn.Tanh(),
-            layer_init(
-                nn.Linear(64, 1),
-                std=1.0,
-            ),
-        )
-        self.actor = nn.Sequential(
-            layer_init(
-                nn.Linear(np.array(envs.single_observation_space.shape).prod(), 64)
-            ),
-            nn.Tanh(),
-            layer_init(nn.Linear(64, 64)),
-            nn.Tanh(),
-            layer_init(
-                nn.Linear(64, envs.single_action_space.n),
-                std=0.01,
-            ),
-        )
-
-    def get_value(self, x):
-        return self.critic(x)
-
-    def get_action_and_value(self, x, action=None):
-        action_logits = self.actor(x)
-        action_dist = Categorical(logits=action_logits)
-        if action is None:
-            action = action_dist.sample()
-        logprob = action_dist.log_prob(action)
-        return action, logprob, action_dist.entropy(), self.critic(x)
 
 
 if __name__ == "__main__":
@@ -436,75 +384,28 @@ if __name__ == "__main__":
 
     device = torch.device("cuda" if torch.cuda.is_available() and args.cuda else "cpu")
 
+    # env = gym.make(args.env_id)
+    # env = gym.wrappers.RecordEpisodeStatistics(env)
+    # env = gym.wrappers.RecordVideo(env, f"videos/{run_name}")
+    # obs = env.reset()
+    # for _ in range(200):
+    #     action = env.action_space.sample()
+    #     obs, reward, done, info = env.step(action)
+    #     if done:
+    #         env.reset()
+    #         print("episodic return:", info["episode"]["r"])
+    # env.close()
     envs = gym.vector.SyncVectorEnv(
-        [
-            make_env(args.env_id, args.seed + i, i, args.capture_video, run_name)
-            for i in range(args.num_envs)
-        ]
+        [make_env(args.env_id, args.capture_video, run_name)]
     )
-    assert isinstance(
-        envs.single_action_space, gym.spaces.Discrete
-    ), "only discrete action space is supported"
+    observation = envs.reset()
+    for _ in range(200):
+        action = envs.action_space.sample()
+        observation, reward, done, info = envs.step(action)
+        for item in info:
 
-    agent = Agent(envs).to(device)
-    optimizer = optim.Adam(agent.parameters(), lr=args.learning_rate, eps=1e-5)
-
-    obs = torch.zeros(
-        (args.num_steps, args.num_envs) + envs.single_observation_space.shape
-    ).to(device)
-    actions = torch.zeros(
-        (args.num_steps, args.num_envs) + envs.single_observation_space.shape
-    ).to(device)
-    logprobs = torch.zeros((args.num_steps, args.num_envs)).to(device)
-    rewards = torch.zeros((args.num_steps, args.num_envs)).to(device)
-    dones = torch.zeros((args.num_steps, args.num_envs)).to(device)
-    values = torch.zeros((args.num_steps, args.num_envs)).to(device)
-
-    global_step = 0
-    start_time = time.time()
-    next_obs = torch.Tensor(envs.reset()).to(device)
-    next_done = torch.zeros(args.num_envs).to(device)
-    num_updates = args.total_timesteps // args.batch_size
-    for update in range(1, num_updates + 1):
-        if args.anneal_lr:
-            frac = 1.0 - (update - 1.0) / num_updates
-            lr_now = args.learning_rate * frac
-            optimizer.param_groups[0]["lr"] = lr_now
-
-        for step in range(args.num_steps):
-            global_step += 1 * args.num_envs
-            # TODO: check dimensions
-            obs[step] = next_obs
-            dones[step] = next_done
-
-            with torch.no_grad():
-                action, logprob, _, value = agent.get_action_and_value(obs[step])
-                values[step] = value.flatten()
-            actions[step] = action
-            logprobs[step] = logprob
-
-            next_obs, reward, done, info = envs.step(action.cpu().numpy())
-            rewards[step] = torch.tensor(reward).to(device).view(-1)
-            next_obs, next_done = (
-                torch.Tensor(next_obs).to(device),
-                torch.Tensor(done).to(device),
-            )
-            for item in info:
-                if "episode" in item.keys():
-                    print(
-                        f"global_step={global_step}, episode_return={item['episode']['r']}"
-                    )
-                    writer.add_scalar(
-                        "charts/episode_return",
-                        item["episode"]["r"],
-                        global_step=global_step,
-                    )
-                    writer.add_scalar(
-                        "charts/episode_length",
-                        item["episode"]["l"],
-                        global_step=global_step,
-                    )
-                    break
+            if "episode" in item.keys():
+                print("episodic return:", item["episode"]["r"])
 
     # eval_env = gym.make(args.env_id)
 

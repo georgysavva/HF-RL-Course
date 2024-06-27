@@ -1,0 +1,233 @@
+2024-06-25 14:37:12,412 INFO    StreamThr :23721 [internal.py:wandb_internal():85] W&B internal server running at pid: 23721, started at: 2024-06-25 14:37:12.412090
+2024-06-25 14:37:12,413 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: status
+2024-06-25 14:37:12,415 INFO    WriterThread:23721 [datastore.py:open_for_write():87] open: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/run-cgs9plfn.wandb
+2024-06-25 14:37:12,415 DEBUG   SenderThread:23721 [sender.py:send():379] send: header
+2024-06-25 14:37:12,419 DEBUG   SenderThread:23721 [sender.py:send():379] send: run
+2024-06-25 14:37:12,589 INFO    SenderThread:23721 [dir_watcher.py:__init__():211] watching files in: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files
+2024-06-25 14:37:12,590 INFO    SenderThread:23721 [sender.py:_start_run_threads():1188] run started: cgs9plfn with start time 1719340632.411495
+2024-06-25 14:37:12,596 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: check_version
+2024-06-25 14:37:12,596 DEBUG   SenderThread:23721 [sender.py:send_request():406] send_request: check_version
+2024-06-25 14:37:12,668 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: run_start
+2024-06-25 14:37:12,706 DEBUG   HandlerThread:23721 [system_info.py:__init__():26] System info init
+2024-06-25 14:37:12,706 DEBUG   HandlerThread:23721 [system_info.py:__init__():41] System info init done
+2024-06-25 14:37:12,706 INFO    HandlerThread:23721 [system_monitor.py:start():194] Starting system monitor
+2024-06-25 14:37:12,706 INFO    SystemMonitor:23721 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-06-25 14:37:12,707 INFO    HandlerThread:23721 [system_monitor.py:probe():214] Collecting system info
+2024-06-25 14:37:12,707 INFO    SystemMonitor:23721 [interfaces.py:start():188] Started cpu monitoring
+2024-06-25 14:37:12,707 INFO    SystemMonitor:23721 [interfaces.py:start():188] Started disk monitoring
+2024-06-25 14:37:12,708 INFO    SystemMonitor:23721 [interfaces.py:start():188] Started gpu monitoring
+2024-06-25 14:37:12,708 INFO    SystemMonitor:23721 [interfaces.py:start():188] Started memory monitoring
+2024-06-25 14:37:12,709 INFO    SystemMonitor:23721 [interfaces.py:start():188] Started network monitoring
+2024-06-25 14:37:12,747 DEBUG   HandlerThread:23721 [system_info.py:probe():152] Probing system
+2024-06-25 14:37:12,749 DEBUG   HandlerThread:23721 [system_info.py:_probe_git():137] Probing git
+2024-06-25 14:37:12,756 DEBUG   HandlerThread:23721 [system_info.py:_probe_git():145] Probing git done
+2024-06-25 14:37:12,756 DEBUG   HandlerThread:23721 [system_info.py:probe():200] Probing system done
+2024-06-25 14:37:12,756 DEBUG   HandlerThread:23721 [system_monitor.py:probe():223] {'os': 'Linux-5.15.0-107-generic-x86_64-with-glibc2.31', 'python': '3.10.14', 'heartbeatAt': '2024-06-25T18:37:12.747888', 'startedAt': '2024-06-25T18:37:12.406195', 'docker': None, 'cuda': None, 'args': ('--track',), 'state': 'running', 'program': '/home/georgy/personal/HF-RL-Course/Unit8-PPO/ppo.py', 'codePathLocal': 'ppo.py', 'codePath': 'Unit8-PPO/ppo.py', 'git': {'remote': 'https://github.com/georgysavva/HF-RL-Course.git', 'commit': '7e352b398a15a14e4e0e8c4dd5ce5378eb30c8ae'}, 'email': 'georgy.savva@nyu.edu', 'root': '/home/georgy/personal/HF-RL-Course', 'host': 'lambda-minerva', 'username': 'georgy', 'executable': '/home/georgy/miniconda3/envs/hf-rl-course-unit8/bin/python', 'cpu_count': 32, 'cpu_count_logical': 64, 'cpu_freq': {'current': 2404.6108125, 'min': 2200.0, 'max': 3500.0}, 'cpu_freq_per_core': [{'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2775.762, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 4115.603, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 3380.356, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 4108.361, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 4111.444, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 3500.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2733.947, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 4109.504, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 3613.986, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}], 'disk': {'/': {'total': 915.3232879638672, 'used': 702.7608871459961}}, 'gpu': 'NVIDIA RTX A4000', 'gpu_count': 4, 'gpu_devices': [{'name': 'NVIDIA RTX A4000', 'memory_total': 17171480576}, {'name': 'NVIDIA RTX A4000', 'memory_total': 17171480576}, {'name': 'NVIDIA RTX A4000', 'memory_total': 17171480576}, {'name': 'NVIDIA RTX A4000', 'memory_total': 17171480576}], 'memory': {'total': 251.50744247436523}}
+2024-06-25 14:37:12,756 INFO    HandlerThread:23721 [system_monitor.py:probe():224] Finished collecting system info
+2024-06-25 14:37:12,756 INFO    HandlerThread:23721 [system_monitor.py:probe():227] Publishing system info
+2024-06-25 14:37:12,756 DEBUG   HandlerThread:23721 [system_info.py:_save_conda():209] Saving list of conda packages installed into the current environment
+2024-06-25 14:37:13,591 INFO    Thread-12 :23721 [dir_watcher.py:_on_file_created():271] file/dir created: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/conda-environment.yaml
+2024-06-25 14:37:13,872 DEBUG   HandlerThread:23721 [system_info.py:_save_conda():224] Saving conda packages done
+2024-06-25 14:37:13,872 DEBUG   HandlerThread:23721 [system_info.py:_save_code():44] Saving code
+2024-06-25 14:37:13,875 DEBUG   HandlerThread:23721 [system_info.py:_save_code():67] Saving code done
+2024-06-25 14:37:13,875 DEBUG   HandlerThread:23721 [system_info.py:_save_patches():84] Saving git patches
+2024-06-25 14:37:13,897 DEBUG   HandlerThread:23721 [system_info.py:_save_patches():126] Saving git patches done
+2024-06-25 14:37:13,897 INFO    HandlerThread:23721 [system_monitor.py:probe():229] Finished publishing system info
+2024-06-25 14:37:13,902 DEBUG   SenderThread:23721 [sender.py:send():379] send: files
+2024-06-25 14:37:13,902 INFO    SenderThread:23721 [sender.py:_save_file():1454] saving file wandb-metadata.json with policy now
+2024-06-25 14:37:13,903 INFO    SenderThread:23721 [sender.py:_save_file():1454] saving file code/Unit8-PPO/ppo.py with policy now
+2024-06-25 14:37:13,903 INFO    SenderThread:23721 [sender.py:_save_file():1454] saving file diff.patch with policy now
+2024-06-25 14:37:13,959 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: python_packages
+2024-06-25 14:37:13,959 DEBUG   SenderThread:23721 [sender.py:send_request():406] send_request: python_packages
+2024-06-25 14:37:13,960 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-25 14:37:13,960 DEBUG   SenderThread:23721 [sender.py:send_request():406] send_request: stop_status
+2024-06-25 14:37:13,962 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-25 14:37:13,962 INFO    HandlerThread:23721 [handler.py:handle_tbrecord():783] handling tbrecord: tbrecord {
+  log_dir: "runs/CartPole-v1__ppo__1__1719340631"
+  save: true
+}
+control {
+  relay_id: "f0e7faff7f654dc18eb56fb59c69d9a4"
+}
+_info {
+  stream_id: "cgs9plfn"
+}
+
+2024-06-25 14:37:13,962 DEBUG   HandlerThread:23721 [config_util.py:dict_from_config_file():70] no default config file found in config-defaults.yaml
+2024-06-25 14:37:14,101 DEBUG   SenderThread:23721 [sender.py:send():379] send: telemetry
+2024-06-25 14:37:14,101 DEBUG   SenderThread:23721 [sender.py:send():379] send: tbrecord
+2024-06-25 14:37:14,101 DEBUG   SenderThread:23721 [sender.py:send():379] send: files
+2024-06-25 14:37:14,101 INFO    SenderThread:23721 [sender.py:_save_file():1454] saving file events.out.tfevents.1719340633.lambda-minerva.23636.0 with policy live
+2024-06-25 14:37:14,102 DEBUG   SenderThread:23721 [sender.py:send():379] send: exit
+2024-06-25 14:37:14,102 INFO    SenderThread:23721 [sender.py:send_exit():586] handling exit code: 0
+2024-06-25 14:37:14,103 INFO    SenderThread:23721 [sender.py:send_exit():588] handling runtime: 1
+2024-06-25 14:37:14,103 INFO    SenderThread:23721 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-06-25 14:37:14,103 INFO    SenderThread:23721 [sender.py:send_exit():594] send defer
+2024-06-25 14:37:14,103 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 14:37:14,103 INFO    HandlerThread:23721 [handler.py:handle_request_defer():184] handle defer: 0
+2024-06-25 14:37:14,104 DEBUG   SenderThread:23721 [sender.py:send_request():406] send_request: defer
+2024-06-25 14:37:14,104 INFO    SenderThread:23721 [sender.py:send_request_defer():610] handle sender defer: 0
+2024-06-25 14:37:14,104 INFO    SenderThread:23721 [sender.py:transition_state():614] send defer: 1
+2024-06-25 14:37:14,106 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 14:37:14,106 INFO    HandlerThread:23721 [handler.py:handle_request_defer():184] handle defer: 1
+2024-06-25 14:37:14,107 DEBUG   SenderThread:23721 [sender.py:send_request():406] send_request: defer
+2024-06-25 14:37:14,107 INFO    SenderThread:23721 [sender.py:send_request_defer():610] handle sender defer: 1
+2024-06-25 14:37:14,107 INFO    SenderThread:23721 [sender.py:transition_state():614] send defer: 2
+2024-06-25 14:37:14,107 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 14:37:14,107 INFO    HandlerThread:23721 [handler.py:handle_request_defer():184] handle defer: 2
+2024-06-25 14:37:14,107 INFO    HandlerThread:23721 [system_monitor.py:finish():203] Stopping system monitor
+2024-06-25 14:37:14,107 INFO    HandlerThread:23721 [interfaces.py:finish():200] Joined cpu monitor
+2024-06-25 14:37:14,107 DEBUG   SystemMonitor:23721 [system_monitor.py:_start():172] Starting system metrics aggregation loop
+2024-06-25 14:37:14,107 INFO    HandlerThread:23721 [interfaces.py:finish():200] Joined disk monitor
+2024-06-25 14:37:14,108 DEBUG   SystemMonitor:23721 [system_monitor.py:_start():179] Finished system metrics aggregation loop
+2024-06-25 14:37:14,108 DEBUG   SystemMonitor:23721 [system_monitor.py:_start():183] Publishing last batch of metrics
+2024-06-25 14:37:14,169 INFO    wandb-upload_2:23721 [upload_job.py:push():130] Uploaded file /tmp/tmpe3rt9sbswandb/cmorpome-diff.patch
+2024-06-25 14:37:14,181 INFO    wandb-upload_0:23721 [upload_job.py:push():130] Uploaded file /tmp/tmpe3rt9sbswandb/scivpu38-wandb-metadata.json
+2024-06-25 14:37:14,189 INFO    wandb-upload_1:23721 [upload_job.py:push():130] Uploaded file /tmp/tmpe3rt9sbswandb/xhegmwrh-code/Unit8-PPO/ppo.py
+2024-06-25 14:37:14,321 INFO    wandb-upload_3:23721 [upload_job.py:push():130] Uploaded file /tmp/tmpe3rt9sbswandb/cp5n748f-events.out.tfevents.1719340633.lambda-minerva.23636.0
+2024-06-25 14:37:14,517 INFO    HandlerThread:23721 [interfaces.py:finish():200] Joined gpu monitor
+2024-06-25 14:37:14,517 INFO    HandlerThread:23721 [interfaces.py:finish():200] Joined memory monitor
+2024-06-25 14:37:14,517 INFO    HandlerThread:23721 [interfaces.py:finish():200] Joined network monitor
+2024-06-25 14:37:14,517 DEBUG   SenderThread:23721 [sender.py:send_request():406] send_request: defer
+2024-06-25 14:37:14,518 INFO    SenderThread:23721 [sender.py:send_request_defer():610] handle sender defer: 2
+2024-06-25 14:37:14,518 INFO    SenderThread:23721 [sender.py:transition_state():614] send defer: 3
+2024-06-25 14:37:14,518 DEBUG   SenderThread:23721 [sender.py:send():379] send: stats
+2024-06-25 14:37:14,518 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 14:37:14,518 INFO    HandlerThread:23721 [handler.py:handle_request_defer():184] handle defer: 3
+2024-06-25 14:37:14,518 DEBUG   SenderThread:23721 [sender.py:send_request():406] send_request: defer
+2024-06-25 14:37:14,518 INFO    SenderThread:23721 [sender.py:send_request_defer():610] handle sender defer: 3
+2024-06-25 14:37:14,518 INFO    SenderThread:23721 [sender.py:transition_state():614] send defer: 4
+2024-06-25 14:37:14,518 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 14:37:14,518 INFO    HandlerThread:23721 [handler.py:handle_request_defer():184] handle defer: 4
+2024-06-25 14:37:14,590 INFO    Thread-12 :23721 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/conda-environment.yaml
+2024-06-25 14:37:14,591 INFO    Thread-12 :23721 [dir_watcher.py:_on_file_created():271] file/dir created: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/wandb-metadata.json
+2024-06-25 14:37:14,591 INFO    Thread-12 :23721 [dir_watcher.py:_on_file_created():271] file/dir created: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/requirements.txt
+2024-06-25 14:37:14,591 INFO    Thread-12 :23721 [dir_watcher.py:_on_file_created():271] file/dir created: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/output.log
+2024-06-25 14:37:14,591 INFO    Thread-12 :23721 [dir_watcher.py:_on_file_created():271] file/dir created: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/code/Unit8-PPO/ppo.py
+2024-06-25 14:37:14,591 INFO    Thread-12 :23721 [dir_watcher.py:_on_file_created():271] file/dir created: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/diff.patch
+2024-06-25 14:37:14,591 INFO    Thread-12 :23721 [dir_watcher.py:_on_file_created():271] file/dir created: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/wandb-summary.json
+2024-06-25 14:37:14,591 INFO    Thread-12 :23721 [dir_watcher.py:_on_file_created():271] file/dir created: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/events.out.tfevents.1719340633.lambda-minerva.23636.0
+2024-06-25 14:37:14,592 INFO    Thread-12 :23721 [dir_watcher.py:_on_file_created():271] file/dir created: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/code
+2024-06-25 14:37:14,592 INFO    Thread-12 :23721 [dir_watcher.py:_on_file_created():271] file/dir created: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/code/Unit8-PPO
+2024-06-25 14:37:16,591 INFO    Thread-12 :23721 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/output.log
+2024-06-25 14:37:21,016 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: poll_exit
+2024-06-25 14:37:21,016 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: status_report
+2024-06-25 14:37:21,016 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: keepalive
+2024-06-25 14:37:21,017 DEBUG   SenderThread:23721 [sender.py:send_request():406] send_request: defer
+2024-06-25 14:37:21,017 INFO    SenderThread:23721 [sender.py:send_request_defer():610] handle sender defer: 4
+2024-06-25 14:37:21,017 INFO    SenderThread:23721 [sender.py:transition_state():614] send defer: 5
+2024-06-25 14:37:21,017 DEBUG   SenderThread:23721 [sender.py:send_request():406] send_request: poll_exit
+2024-06-25 14:37:21,018 DEBUG   SenderThread:23721 [sender.py:send():379] send: history
+2024-06-25 14:37:21,018 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 14:37:21,018 DEBUG   SenderThread:23721 [sender.py:send_request():406] send_request: summary_record
+2024-06-25 14:37:21,019 INFO    HandlerThread:23721 [handler.py:handle_request_defer():184] handle defer: 5
+2024-06-25 14:37:21,019 INFO    SenderThread:23721 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-06-25 14:37:21,020 DEBUG   SenderThread:23721 [sender.py:send():379] send: summary
+2024-06-25 14:37:21,031 INFO    SenderThread:23721 [sender.py:_save_file():1454] saving file wandb-summary.json with policy end
+2024-06-25 14:37:21,031 DEBUG   SenderThread:23721 [sender.py:send_request():406] send_request: defer
+2024-06-25 14:37:21,031 INFO    SenderThread:23721 [sender.py:send_request_defer():610] handle sender defer: 5
+2024-06-25 14:37:21,031 INFO    SenderThread:23721 [sender.py:transition_state():614] send defer: 6
+2024-06-25 14:37:21,031 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 14:37:21,031 INFO    HandlerThread:23721 [handler.py:handle_request_defer():184] handle defer: 6
+2024-06-25 14:37:21,031 DEBUG   SenderThread:23721 [sender.py:send_request():406] send_request: defer
+2024-06-25 14:37:21,031 INFO    SenderThread:23721 [sender.py:send_request_defer():610] handle sender defer: 6
+2024-06-25 14:37:21,035 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: status_report
+2024-06-25 14:37:21,055 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: poll_exit
+2024-06-25 14:37:21,118 INFO    SenderThread:23721 [sender.py:transition_state():614] send defer: 7
+2024-06-25 14:37:21,118 DEBUG   SenderThread:23721 [sender.py:send_request():406] send_request: poll_exit
+2024-06-25 14:37:21,118 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 14:37:21,118 INFO    HandlerThread:23721 [handler.py:handle_request_defer():184] handle defer: 7
+2024-06-25 14:37:21,119 DEBUG   SenderThread:23721 [sender.py:send_request():406] send_request: defer
+2024-06-25 14:37:21,119 INFO    SenderThread:23721 [sender.py:send_request_defer():610] handle sender defer: 7
+2024-06-25 14:37:21,593 INFO    Thread-12 :23721 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/wandb-summary.json
+2024-06-25 14:37:21,593 INFO    Thread-12 :23721 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/config.yaml
+2024-06-25 14:37:22,055 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: poll_exit
+2024-06-25 14:37:22,112 INFO    SenderThread:23721 [sender.py:transition_state():614] send defer: 8
+2024-06-25 14:37:22,112 DEBUG   SenderThread:23721 [sender.py:send_request():406] send_request: poll_exit
+2024-06-25 14:37:22,112 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 14:37:22,112 INFO    HandlerThread:23721 [handler.py:handle_request_defer():184] handle defer: 8
+2024-06-25 14:37:22,113 DEBUG   SenderThread:23721 [sender.py:send_request():406] send_request: defer
+2024-06-25 14:37:22,113 INFO    SenderThread:23721 [sender.py:send_request_defer():610] handle sender defer: 8
+2024-06-25 14:37:22,113 INFO    SenderThread:23721 [job_builder.py:build():440] Attempting to build job artifact
+2024-06-25 14:37:22,113 INFO    SenderThread:23721 [job_builder.py:_get_source_type():569] is repo sourced job
+2024-06-25 14:37:22,131 INFO    SenderThread:23721 [job_builder.py:build():545] adding wandb-job metadata file
+2024-06-25 14:37:22,134 INFO    SenderThread:23721 [sender.py:transition_state():614] send defer: 9
+2024-06-25 14:37:22,134 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 14:37:22,134 DEBUG   SenderThread:23721 [sender.py:send():379] send: artifact
+2024-06-25 14:37:22,134 INFO    HandlerThread:23721 [handler.py:handle_request_defer():184] handle defer: 9
+2024-06-25 14:37:22,593 INFO    Thread-12 :23721 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/output.log
+2024-06-25 14:37:22,630 INFO    wandb-upload_0:23721 [upload_job.py:push():85] Skipped uploading /home/georgy/.local/share/wandb/artifacts/staging/tmpufd8dyrx
+2024-06-25 14:37:22,630 INFO    wandb-upload_1:23721 [upload_job.py:push():85] Skipped uploading /tmp/tmpg4o4tako/wandb-job.json
+2024-06-25 14:37:22,725 INFO    wandb-upload_2:23721 [upload_job.py:push():88] Uploaded file /home/georgy/.local/share/wandb/artifacts/staging/tmpu1pcvktg
+2024-06-25 14:37:23,056 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: poll_exit
+2024-06-25 14:37:23,316 INFO    SenderThread:23721 [sender.py:send_artifact():1530] sent artifact job-https___github.com_georgysavva_HF-RL-Course.git_Unit8-PPO_ppo.py - {'id': 'QXJ0aWZhY3Q6OTI2NDAzMjkz', 'state': 'PENDING', 'artifactSequence': {'id': 'QXJ0aWZhY3RDb2xsZWN0aW9uOjIzMzEyNTU5NA==', 'latestArtifact': {'id': 'QXJ0aWZhY3Q6OTI2MzU4MzAw', 'versionIndex': 0}}}
+2024-06-25 14:37:23,316 DEBUG   SenderThread:23721 [sender.py:send_request():406] send_request: defer
+2024-06-25 14:37:23,316 INFO    SenderThread:23721 [sender.py:send_request_defer():610] handle sender defer: 9
+2024-06-25 14:37:23,316 INFO    SenderThread:23721 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-06-25 14:37:23,594 INFO    SenderThread:23721 [dir_watcher.py:finish():388] scan: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files
+2024-06-25 14:37:23,594 INFO    SenderThread:23721 [dir_watcher.py:finish():402] scan save: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/conda-environment.yaml conda-environment.yaml
+2024-06-25 14:37:23,594 INFO    SenderThread:23721 [dir_watcher.py:finish():402] scan save: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/config.yaml config.yaml
+2024-06-25 14:37:23,595 INFO    SenderThread:23721 [dir_watcher.py:finish():402] scan save: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/events.out.tfevents.1719340633.lambda-minerva.23636.0 events.out.tfevents.1719340633.lambda-minerva.23636.0
+2024-06-25 14:37:23,595 INFO    SenderThread:23721 [dir_watcher.py:finish():402] scan save: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/requirements.txt requirements.txt
+2024-06-25 14:37:23,599 INFO    SenderThread:23721 [dir_watcher.py:finish():402] scan save: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/output.log output.log
+2024-06-25 14:37:23,599 INFO    SenderThread:23721 [dir_watcher.py:finish():402] scan save: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/wandb-metadata.json wandb-metadata.json
+2024-06-25 14:37:23,599 INFO    SenderThread:23721 [dir_watcher.py:finish():402] scan save: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/wandb-summary.json wandb-summary.json
+2024-06-25 14:37:23,600 INFO    SenderThread:23721 [dir_watcher.py:finish():402] scan save: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/diff.patch diff.patch
+2024-06-25 14:37:23,602 INFO    SenderThread:23721 [dir_watcher.py:finish():402] scan save: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/code/Unit8-PPO/ppo.py code/Unit8-PPO/ppo.py
+2024-06-25 14:37:23,604 INFO    SenderThread:23721 [sender.py:transition_state():614] send defer: 10
+2024-06-25 14:37:23,604 DEBUG   SenderThread:23721 [sender.py:send_request():406] send_request: poll_exit
+2024-06-25 14:37:23,605 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 14:37:23,605 INFO    HandlerThread:23721 [handler.py:handle_request_defer():184] handle defer: 10
+2024-06-25 14:37:23,607 DEBUG   SenderThread:23721 [sender.py:send_request():406] send_request: defer
+2024-06-25 14:37:23,607 INFO    SenderThread:23721 [sender.py:send_request_defer():610] handle sender defer: 10
+2024-06-25 14:37:23,607 INFO    SenderThread:23721 [file_pusher.py:finish():169] shutting down file pusher
+2024-06-25 14:37:23,778 INFO    wandb-upload_3:23721 [upload_job.py:push():130] Uploaded file /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/conda-environment.yaml
+2024-06-25 14:37:23,785 INFO    wandb-upload_2:23721 [upload_job.py:push():130] Uploaded file /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/output.log
+2024-06-25 14:37:23,797 INFO    wandb-upload_4:23721 [upload_job.py:push():130] Uploaded file /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/requirements.txt
+2024-06-25 14:37:23,813 INFO    wandb-upload_0:23721 [upload_job.py:push():130] Uploaded file /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/config.yaml
+2024-06-25 14:37:23,814 INFO    wandb-upload_1:23721 [upload_job.py:push():130] Uploaded file /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/files/wandb-summary.json
+2024-06-25 14:37:24,014 INFO    Thread-11 (_thread_body):23721 [sender.py:transition_state():614] send defer: 11
+2024-06-25 14:37:24,015 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 14:37:24,015 INFO    HandlerThread:23721 [handler.py:handle_request_defer():184] handle defer: 11
+2024-06-25 14:37:24,015 DEBUG   SenderThread:23721 [sender.py:send_request():406] send_request: defer
+2024-06-25 14:37:24,015 INFO    SenderThread:23721 [sender.py:send_request_defer():610] handle sender defer: 11
+2024-06-25 14:37:24,015 INFO    SenderThread:23721 [file_pusher.py:join():175] waiting for file pusher
+2024-06-25 14:37:24,016 INFO    SenderThread:23721 [sender.py:transition_state():614] send defer: 12
+2024-06-25 14:37:24,016 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 14:37:24,016 INFO    HandlerThread:23721 [handler.py:handle_request_defer():184] handle defer: 12
+2024-06-25 14:37:24,016 DEBUG   SenderThread:23721 [sender.py:send_request():406] send_request: defer
+2024-06-25 14:37:24,016 INFO    SenderThread:23721 [sender.py:send_request_defer():610] handle sender defer: 12
+2024-06-25 14:37:24,016 INFO    SenderThread:23721 [file_stream.py:finish():601] file stream finish called
+2024-06-25 14:37:24,057 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: poll_exit
+2024-06-25 14:37:24,081 INFO    SenderThread:23721 [file_stream.py:finish():605] file stream finish is done
+2024-06-25 14:37:24,081 INFO    SenderThread:23721 [sender.py:transition_state():614] send defer: 13
+2024-06-25 14:37:24,081 DEBUG   SenderThread:23721 [sender.py:send_request():406] send_request: poll_exit
+2024-06-25 14:37:24,081 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 14:37:24,082 INFO    HandlerThread:23721 [handler.py:handle_request_defer():184] handle defer: 13
+2024-06-25 14:37:24,082 DEBUG   SenderThread:23721 [sender.py:send_request():406] send_request: defer
+2024-06-25 14:37:24,082 INFO    SenderThread:23721 [sender.py:send_request_defer():610] handle sender defer: 13
+2024-06-25 14:37:24,082 INFO    SenderThread:23721 [sender.py:transition_state():614] send defer: 14
+2024-06-25 14:37:24,082 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: defer
+2024-06-25 14:37:24,082 DEBUG   SenderThread:23721 [sender.py:send():379] send: final
+2024-06-25 14:37:24,082 INFO    HandlerThread:23721 [handler.py:handle_request_defer():184] handle defer: 14
+2024-06-25 14:37:24,082 DEBUG   SenderThread:23721 [sender.py:send():379] send: footer
+2024-06-25 14:37:24,083 DEBUG   SenderThread:23721 [sender.py:send_request():406] send_request: defer
+2024-06-25 14:37:24,083 INFO    SenderThread:23721 [sender.py:send_request_defer():610] handle sender defer: 14
+2024-06-25 14:37:24,083 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: poll_exit
+2024-06-25 14:37:24,083 DEBUG   SenderThread:23721 [sender.py:send_request():406] send_request: poll_exit
+2024-06-25 14:37:24,084 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: server_info
+2024-06-25 14:37:24,084 DEBUG   SenderThread:23721 [sender.py:send_request():406] send_request: server_info
+2024-06-25 14:37:24,085 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: poll_exit
+2024-06-25 14:37:24,086 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: get_summary
+2024-06-25 14:37:24,086 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: sampled_history
+2024-06-25 14:37:24,087 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-25 14:37:24,125 DEBUG   SenderThread:23721 [sender.py:send_request():406] send_request: poll_exit
+2024-06-25 14:37:24,125 INFO    MainThread:23721 [wandb_run.py:_footer_history_summary_info():3988] rendering history
+2024-06-25 14:37:24,126 INFO    MainThread:23721 [wandb_run.py:_footer_history_summary_info():4020] rendering summary
+2024-06-25 14:37:24,126 INFO    MainThread:23721 [wandb_run.py:_footer_sync_info():3947] logging synced files
+2024-06-25 14:37:24,126 DEBUG   HandlerThread:23721 [handler.py:handle_request():158] handle_request: shutdown
+2024-06-25 14:37:24,126 INFO    HandlerThread:23721 [handler.py:finish():882] shutting down handler
+2024-06-25 14:37:25,086 INFO    WriterThread:23721 [datastore.py:close():296] close: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_143712-cgs9plfn/run-cgs9plfn.wandb
+2024-06-25 14:37:25,125 INFO    SenderThread:23721 [sender.py:finish():1608] shutting down sender
+2024-06-25 14:37:25,126 INFO    SenderThread:23721 [file_pusher.py:finish():169] shutting down file pusher
+2024-06-25 14:37:25,126 INFO    SenderThread:23721 [file_pusher.py:join():175] waiting for file pusher

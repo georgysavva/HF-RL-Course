@@ -1,0 +1,42 @@
+diff --git a/Unit8-PPO/poetry.lock b/Unit8-PPO/poetry.lock
+index ca68281..06b37fe 100644
+--- a/Unit8-PPO/poetry.lock
++++ b/Unit8-PPO/poetry.lock
+@@ -2169,4 +2169,4 @@ watchdog = ["watchdog (>=2.3)"]
+ [metadata]
+ lock-version = "2.0"
+ python-versions = "^3.10"
+-content-hash = "418a602c894330fe3750367dd4362a3abe3f128d25aca31b064f576077300333"
++content-hash = "33c668bfb437546ef2abbaa3dd516f8e07eacbfaa8e12a554c50a03f1f9b63f9"
+diff --git a/Unit8-PPO/ppo.py b/Unit8-PPO/ppo.py
+index 7898957..a013b1b 100644
+--- a/Unit8-PPO/ppo.py
++++ b/Unit8-PPO/ppo.py
+@@ -398,6 +398,14 @@ if __name__ == "__main__":
+     envs = gym.vector.SyncVectorEnv(
+         [make_env(args.env_id, args.capture_video, run_name)]
+     )
++    observation = envs.reset()
++    for _ in range(200):
++        action = envs.action_space.sample()
++        observation, reward, done, info = envs.step(action)
++        for item in info:
++
++            if "episode" in item.keys():
++                print("episodic return:", item["episode"]["r"])
+ 
+     # eval_env = gym.make(args.env_id)
+ 
+diff --git a/Unit8-PPO/pyproject.toml b/Unit8-PPO/pyproject.toml
+index 3888d74..3d121fa 100644
+--- a/Unit8-PPO/pyproject.toml
++++ b/Unit8-PPO/pyproject.toml
+@@ -17,7 +17,7 @@ swig = "^4.2.1"
+ wasabi = "^1.1.3"
+ wandb = "^0.17.2"
+ stable-baselines3 = "^2.3.2"
+-tensorboard = "^2.17.0"
++tensorboard = "2.17.0"
+ opencv-python = "^4.10.0.84"
+ imageio = "^2.34.1"
+ 

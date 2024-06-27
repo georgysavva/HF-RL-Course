@@ -1,0 +1,114 @@
+2024-06-25 14:24:44,310 INFO    StreamThr :22011 [internal.py:wandb_internal():85] W&B internal server running at pid: 22011, started at: 2024-06-25 14:24:44.309899
+2024-06-25 14:24:44,311 DEBUG   HandlerThread:22011 [handler.py:handle_request():158] handle_request: status
+2024-06-25 14:24:44,313 INFO    WriterThread:22011 [datastore.py:open_for_write():87] open: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_142444-lsp9zbrj/run-lsp9zbrj.wandb
+2024-06-25 14:24:44,313 DEBUG   SenderThread:22011 [sender.py:send():379] send: header
+2024-06-25 14:24:44,316 DEBUG   SenderThread:22011 [sender.py:send():379] send: run
+2024-06-25 14:24:44,558 INFO    SenderThread:22011 [dir_watcher.py:__init__():211] watching files in: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_142444-lsp9zbrj/files
+2024-06-25 14:24:44,558 INFO    SenderThread:22011 [sender.py:_start_run_threads():1188] run started: lsp9zbrj with start time 1719339884.309772
+2024-06-25 14:24:44,566 DEBUG   HandlerThread:22011 [handler.py:handle_request():158] handle_request: check_version
+2024-06-25 14:24:44,566 DEBUG   SenderThread:22011 [sender.py:send_request():406] send_request: check_version
+2024-06-25 14:24:44,640 DEBUG   HandlerThread:22011 [handler.py:handle_request():158] handle_request: run_start
+2024-06-25 14:24:44,675 DEBUG   HandlerThread:22011 [system_info.py:__init__():26] System info init
+2024-06-25 14:24:44,675 DEBUG   HandlerThread:22011 [system_info.py:__init__():41] System info init done
+2024-06-25 14:24:44,676 INFO    HandlerThread:22011 [system_monitor.py:start():194] Starting system monitor
+2024-06-25 14:24:44,676 INFO    SystemMonitor:22011 [system_monitor.py:_start():158] Starting system asset monitoring threads
+2024-06-25 14:24:44,676 INFO    HandlerThread:22011 [system_monitor.py:probe():214] Collecting system info
+2024-06-25 14:24:44,676 INFO    SystemMonitor:22011 [interfaces.py:start():188] Started cpu monitoring
+2024-06-25 14:24:44,677 INFO    SystemMonitor:22011 [interfaces.py:start():188] Started disk monitoring
+2024-06-25 14:24:44,678 INFO    SystemMonitor:22011 [interfaces.py:start():188] Started gpu monitoring
+2024-06-25 14:24:44,679 INFO    SystemMonitor:22011 [interfaces.py:start():188] Started memory monitoring
+2024-06-25 14:24:44,680 INFO    SystemMonitor:22011 [interfaces.py:start():188] Started network monitoring
+2024-06-25 14:24:44,740 DEBUG   HandlerThread:22011 [system_info.py:probe():152] Probing system
+2024-06-25 14:24:44,742 DEBUG   HandlerThread:22011 [system_info.py:_probe_git():137] Probing git
+2024-06-25 14:24:44,747 DEBUG   HandlerThread:22011 [system_info.py:_probe_git():145] Probing git done
+2024-06-25 14:24:44,747 DEBUG   HandlerThread:22011 [system_info.py:probe():200] Probing system done
+2024-06-25 14:24:44,747 DEBUG   HandlerThread:22011 [system_monitor.py:probe():223] {'os': 'Linux-5.15.0-107-generic-x86_64-with-glibc2.31', 'python': '3.10.14', 'heartbeatAt': '2024-06-25T18:24:44.741064', 'startedAt': '2024-06-25T18:24:44.305454', 'docker': None, 'cuda': None, 'args': ('--track',), 'state': 'running', 'program': '/home/georgy/personal/HF-RL-Course/Unit8-PPO/ppo.py', 'codePathLocal': 'ppo.py', 'codePath': 'Unit8-PPO/ppo.py', 'git': {'remote': 'https://github.com/georgysavva/HF-RL-Course.git', 'commit': '7e352b398a15a14e4e0e8c4dd5ce5378eb30c8ae'}, 'email': 'georgy.savva@nyu.edu', 'root': '/home/georgy/personal/HF-RL-Course', 'host': 'lambda-minerva', 'username': 'georgy', 'executable': '/home/georgy/miniconda3/envs/hf-rl-course-unit8/bin/python', 'cpu_count': 32, 'cpu_count_logical': 64, 'cpu_freq': {'current': 2557.3841406250003, 'min': 2200.0, 'max': 3500.0}, 'cpu_freq_per_core': [{'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 4064.389, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 3500.0, 'min': 2200.0, 'max': 3500.0}, {'current': 3500.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 4061.827, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 3500.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 4064.289, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 4064.509, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 4064.42, 'min': 2200.0, 'max': 3500.0}, {'current': 3143.39, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2292.845, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2251.404, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2200.0, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}, {'current': 4062.543, 'min': 2200.0, 'max': 3500.0}, {'current': 2400.0, 'min': 2200.0, 'max': 3500.0}], 'disk': {'/': {'total': 915.3232879638672, 'used': 702.7271194458008}}, 'gpu': 'NVIDIA RTX A4000', 'gpu_count': 4, 'gpu_devices': [{'name': 'NVIDIA RTX A4000', 'memory_total': 17171480576}, {'name': 'NVIDIA RTX A4000', 'memory_total': 17171480576}, {'name': 'NVIDIA RTX A4000', 'memory_total': 17171480576}, {'name': 'NVIDIA RTX A4000', 'memory_total': 17171480576}], 'memory': {'total': 251.50744247436523}}
+2024-06-25 14:24:44,747 INFO    HandlerThread:22011 [system_monitor.py:probe():224] Finished collecting system info
+2024-06-25 14:24:44,747 INFO    HandlerThread:22011 [system_monitor.py:probe():227] Publishing system info
+2024-06-25 14:24:44,747 DEBUG   HandlerThread:22011 [system_info.py:_save_conda():209] Saving list of conda packages installed into the current environment
+2024-06-25 14:24:45,560 INFO    Thread-12 :22011 [dir_watcher.py:_on_file_created():271] file/dir created: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_142444-lsp9zbrj/files/conda-environment.yaml
+2024-06-25 14:24:45,863 DEBUG   HandlerThread:22011 [system_info.py:_save_conda():224] Saving conda packages done
+2024-06-25 14:24:45,863 DEBUG   HandlerThread:22011 [system_info.py:_save_code():44] Saving code
+2024-06-25 14:24:45,865 DEBUG   HandlerThread:22011 [system_info.py:_save_code():67] Saving code done
+2024-06-25 14:24:45,866 DEBUG   HandlerThread:22011 [system_info.py:_save_patches():84] Saving git patches
+2024-06-25 14:24:45,909 DEBUG   HandlerThread:22011 [system_info.py:_save_patches():126] Saving git patches done
+2024-06-25 14:24:45,910 INFO    HandlerThread:22011 [system_monitor.py:probe():229] Finished publishing system info
+2024-06-25 14:24:45,915 DEBUG   SenderThread:22011 [sender.py:send():379] send: files
+2024-06-25 14:24:45,915 INFO    SenderThread:22011 [sender.py:_save_file():1454] saving file wandb-metadata.json with policy now
+2024-06-25 14:24:45,915 INFO    SenderThread:22011 [sender.py:_save_file():1454] saving file code/Unit8-PPO/ppo.py with policy now
+2024-06-25 14:24:45,916 INFO    SenderThread:22011 [sender.py:_save_file():1454] saving file diff.patch with policy now
+2024-06-25 14:24:45,970 DEBUG   HandlerThread:22011 [handler.py:handle_request():158] handle_request: python_packages
+2024-06-25 14:24:45,970 DEBUG   SenderThread:22011 [sender.py:send_request():406] send_request: python_packages
+2024-06-25 14:24:45,971 DEBUG   HandlerThread:22011 [handler.py:handle_request():158] handle_request: stop_status
+2024-06-25 14:24:45,972 DEBUG   SenderThread:22011 [sender.py:send_request():406] send_request: stop_status
+2024-06-25 14:24:45,976 DEBUG   HandlerThread:22011 [handler.py:handle_request():158] handle_request: internal_messages
+2024-06-25 14:24:45,976 INFO    HandlerThread:22011 [handler.py:handle_tbrecord():783] handling tbrecord: tbrecord {
+  log_dir: "runs/CartPole-v1__ppo__1__1719339883"
+  save: true
+}
+control {
+  relay_id: "c54c2bf7ebf948878c06bb2e6dc7c6a4"
+}
+_info {
+  stream_id: "lsp9zbrj"
+}
+
+2024-06-25 14:24:45,977 DEBUG   HandlerThread:22011 [config_util.py:dict_from_config_file():70] no default config file found in config-defaults.yaml
+2024-06-25 14:24:46,060 INFO    SenderThread:22011 [sender.py:finish():1608] shutting down sender
+2024-06-25 14:24:46,061 INFO    SenderThread:22011 [dir_watcher.py:finish():358] shutting down directory watcher
+2024-06-25 14:24:46,175 INFO    wandb-upload_2:22011 [upload_job.py:push():130] Uploaded file /tmp/tmpszhqlclxwandb/5hmsps4r-diff.patch
+2024-06-25 14:24:46,186 INFO    wandb-upload_0:22011 [upload_job.py:push():130] Uploaded file /tmp/tmpszhqlclxwandb/eybospx2-wandb-metadata.json
+2024-06-25 14:24:46,193 INFO    wandb-upload_1:22011 [upload_job.py:push():130] Uploaded file /tmp/tmpszhqlclxwandb/ziuqbo1b-code/Unit8-PPO/ppo.py
+2024-06-25 14:24:46,558 INFO    Thread-12 :22011 [dir_watcher.py:_on_file_modified():288] file/dir modified: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_142444-lsp9zbrj/files/conda-environment.yaml
+2024-06-25 14:24:46,559 INFO    SenderThread:22011 [dir_watcher.py:_on_file_created():271] file/dir created: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_142444-lsp9zbrj/files/requirements.txt
+2024-06-25 14:24:46,559 INFO    SenderThread:22011 [dir_watcher.py:_on_file_created():271] file/dir created: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_142444-lsp9zbrj/files/wandb-metadata.json
+2024-06-25 14:24:46,559 INFO    SenderThread:22011 [dir_watcher.py:_on_file_created():271] file/dir created: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_142444-lsp9zbrj/files/code/Unit8-PPO/ppo.py
+2024-06-25 14:24:46,559 INFO    SenderThread:22011 [dir_watcher.py:_on_file_created():271] file/dir created: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_142444-lsp9zbrj/files/diff.patch
+2024-06-25 14:24:46,559 INFO    SenderThread:22011 [dir_watcher.py:_on_file_created():271] file/dir created: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_142444-lsp9zbrj/files/code
+2024-06-25 14:24:46,560 INFO    SenderThread:22011 [dir_watcher.py:_on_file_created():271] file/dir created: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_142444-lsp9zbrj/files/code/Unit8-PPO
+2024-06-25 14:24:46,560 INFO    SenderThread:22011 [dir_watcher.py:finish():388] scan: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_142444-lsp9zbrj/files
+2024-06-25 14:24:46,560 INFO    SenderThread:22011 [dir_watcher.py:finish():402] scan save: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_142444-lsp9zbrj/files/conda-environment.yaml conda-environment.yaml
+2024-06-25 14:24:46,560 INFO    SenderThread:22011 [dir_watcher.py:finish():402] scan save: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_142444-lsp9zbrj/files/config.yaml config.yaml
+2024-06-25 14:24:46,561 INFO    SenderThread:22011 [dir_watcher.py:finish():402] scan save: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_142444-lsp9zbrj/files/requirements.txt requirements.txt
+2024-06-25 14:24:46,562 INFO    SenderThread:22011 [dir_watcher.py:finish():402] scan save: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_142444-lsp9zbrj/files/wandb-metadata.json wandb-metadata.json
+2024-06-25 14:24:46,562 INFO    SenderThread:22011 [dir_watcher.py:finish():402] scan save: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_142444-lsp9zbrj/files/diff.patch diff.patch
+2024-06-25 14:24:46,565 INFO    SenderThread:22011 [dir_watcher.py:finish():402] scan save: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_142444-lsp9zbrj/files/code/Unit8-PPO/ppo.py code/Unit8-PPO/ppo.py
+2024-06-25 14:24:46,565 INFO    SenderThread:22011 [file_pusher.py:finish():169] shutting down file pusher
+2024-06-25 14:24:46,565 INFO    SenderThread:22011 [file_pusher.py:join():175] waiting for file pusher
+2024-06-25 14:24:46,741 INFO    wandb-upload_1:22011 [upload_job.py:push():130] Uploaded file /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_142444-lsp9zbrj/files/config.yaml
+2024-06-25 14:24:46,748 INFO    wandb-upload_2:22011 [upload_job.py:push():130] Uploaded file /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_142444-lsp9zbrj/files/conda-environment.yaml
+2024-06-25 14:24:46,758 INFO    wandb-upload_0:22011 [upload_job.py:push():130] Uploaded file /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_142444-lsp9zbrj/files/requirements.txt
+2024-06-25 14:24:46,977 INFO    WriterThread:22011 [datastore.py:close():296] close: /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_142444-lsp9zbrj/run-lsp9zbrj.wandb
+2024-06-25 14:24:47,066 INFO    SenderThread:22011 [file_stream.py:finish():601] file stream finish called
+2024-06-25 14:24:47,135 INFO    SenderThread:22011 [file_stream.py:finish():605] file stream finish is done
+2024-06-25 14:24:47,136 ERROR   StreamThr :22011 [internal.py:wandb_internal():173] Thread HandlerThread:
+Traceback (most recent call last):
+  File "/home/georgy/miniconda3/envs/hf-rl-course-unit8/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 48, in run
+    self._run()
+  File "/home/georgy/miniconda3/envs/hf-rl-course-unit8/lib/python3.10/site-packages/wandb/sdk/internal/internal_util.py", line 99, in _run
+    self._process(record)
+  File "/home/georgy/miniconda3/envs/hf-rl-course-unit8/lib/python3.10/site-packages/wandb/sdk/internal/internal.py", line 278, in _process
+    self._hm.handle(record)
+  File "/home/georgy/miniconda3/envs/hf-rl-course-unit8/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 150, in handle
+    handler(record)
+  File "/home/georgy/miniconda3/envs/hf-rl-course-unit8/lib/python3.10/site-packages/wandb/sdk/internal/handler.py", line 786, in handle_tbrecord
+    self._tb_watcher.add(tbrecord.log_dir, tbrecord.save, tbrecord.root_dir)
+  File "/home/georgy/miniconda3/envs/hf-rl-course-unit8/lib/python3.10/site-packages/wandb/sdk/internal/tb_watcher.py", line 171, in add
+    tbdir_watcher = TBDirWatcher(
+  File "/home/georgy/miniconda3/envs/hf-rl-course-unit8/lib/python3.10/site-packages/wandb/sdk/internal/tb_watcher.py", line 209, in __init__
+    logdir, self._loader(save, namespace), self._is_our_tfevents_file
+  File "/home/georgy/miniconda3/envs/hf-rl-course-unit8/lib/python3.10/site-packages/wandb/sdk/internal/tb_watcher.py", line 244, in _loader
+    from tensorboard.backend.event_processing import event_file_loader
+  File "/home/georgy/miniconda3/envs/hf-rl-course-unit8/lib/python3.10/site-packages/tensorboard/backend/event_processing/event_file_loader.py", line 21, in <module>
+    from tensorboard import dataclass_compat
+  File "/home/georgy/miniconda3/envs/hf-rl-course-unit8/lib/python3.10/site-packages/tensorboard/dataclass_compat.py", line 33, in <module>
+    from tensorboard.plugins.hparams import metadata as hparams_metadata
+  File "/home/georgy/miniconda3/envs/hf-rl-course-unit8/lib/python3.10/site-packages/tensorboard/plugins/hparams/metadata.py", line 32, in <module>
+    NULL_TENSOR = tensor_util.make_tensor_proto(
+  File "/home/georgy/miniconda3/envs/hf-rl-course-unit8/lib/python3.10/site-packages/tensorboard/util/tensor_util.py", line 405, in make_tensor_proto
+    numpy_dtype = dtypes.as_dtype(nparray.dtype)
+  File "/home/georgy/miniconda3/envs/hf-rl-course-unit8/lib/python3.10/site-packages/tensorboard/compat/tensorflow_stub/dtypes.py", line 677, in as_dtype
+    if type_value.type == np.string_ or type_value.type == np.unicode_:
+  File "/home/georgy/miniconda3/envs/hf-rl-course-unit8/lib/python3.10/site-packages/numpy/__init__.py", line 397, in __getattr__
+    raise AttributeError(
+AttributeError: `np.string_` was removed in the NumPy 2.0 release. Use `np.bytes_` instead.

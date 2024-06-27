@@ -1,0 +1,19 @@
+diff --git a/Unit8-PPO/ppo.py b/Unit8-PPO/ppo.py
+index 7898957..a013b1b 100644
+--- a/Unit8-PPO/ppo.py
++++ b/Unit8-PPO/ppo.py
+@@ -398,6 +398,14 @@ if __name__ == "__main__":
+     envs = gym.vector.SyncVectorEnv(
+         [make_env(args.env_id, args.capture_video, run_name)]
+     )
++    observation = envs.reset()
++    for _ in range(200):
++        action = envs.action_space.sample()
++        observation, reward, done, info = envs.step(action)
++        for item in info:
++
++            if "episode" in item.keys():
++                print("episodic return:", item["episode"]["r"])
+ 
+     # eval_env = gym.make(args.env_id)
+ 

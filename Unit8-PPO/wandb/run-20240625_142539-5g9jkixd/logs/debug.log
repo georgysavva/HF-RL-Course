@@ -1,0 +1,30 @@
+2024-06-25 14:25:39,751 INFO    MainThread:22433 [wandb_setup.py:_flush():76] Current SDK version is 0.17.2
+2024-06-25 14:25:39,752 INFO    MainThread:22433 [wandb_setup.py:_flush():76] Configure stats pid to 22433
+2024-06-25 14:25:39,752 INFO    MainThread:22433 [wandb_setup.py:_flush():76] Loading settings from /home/georgy/.config/wandb/settings
+2024-06-25 14:25:39,752 INFO    MainThread:22433 [wandb_setup.py:_flush():76] Loading settings from /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/settings
+2024-06-25 14:25:39,752 INFO    MainThread:22433 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-06-25 14:25:39,752 INFO    MainThread:22433 [wandb_setup.py:_flush():76] Applying setup settings: {'_disable_service': False}
+2024-06-25 14:25:39,752 INFO    MainThread:22433 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'Unit8-PPO/ppo.py', 'program_abspath': '/home/georgy/personal/HF-RL-Course/Unit8-PPO/ppo.py', 'program': '/home/georgy/personal/HF-RL-Course/Unit8-PPO/ppo.py'}
+2024-06-25 14:25:39,752 INFO    MainThread:22433 [wandb_setup.py:_flush():76] Applying login settings: {}
+2024-06-25 14:25:39,752 INFO    MainThread:22433 [wandb_init.py:_log_setup():520] Logging user logs to /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_142539-5g9jkixd/logs/debug.log
+2024-06-25 14:25:39,752 INFO    MainThread:22433 [wandb_init.py:_log_setup():521] Logging internal logs to /home/georgy/personal/HF-RL-Course/Unit8-PPO/wandb/run-20240625_142539-5g9jkixd/logs/debug-internal.log
+2024-06-25 14:25:39,752 INFO    MainThread:22433 [wandb_init.py:init():560] calling init triggers
+2024-06-25 14:25:39,752 INFO    MainThread:22433 [wandb_init.py:init():567] wandb.init called with sweep_config: {}
+config: {'exp_name': 'ppo', 'seed': 1, 'torch_deterministic': True, 'cuda': True, 'track': True, 'wandb_project_name': 'cleanRL', 'wandb_entity': None, 'capture_video': True, 'env_id': 'CartPole-v1', 'total_timesteps': 50000, 'learning_rate': 0.00025, 'num_envs': 4, 'num_steps': 128, 'anneal_lr': True, 'gae': True, 'gamma': 0.99, 'gae_lambda': 0.95, 'num_minibatches': 4, 'update_epochs': 4, 'norm_adv': True, 'clip_coef': 0.2, 'clip_vloss': True, 'ent_coef': 0.01, 'vf_coef': 0.5, 'max_grad_norm': 0.5, 'target_kl': None, 'repo_id': 'georgysavva/ppo-CartPole-v1', 'batch_size': 512, 'minibatch_size': 128}
+2024-06-25 14:25:39,752 INFO    MainThread:22433 [wandb_init.py:init():610] starting backend
+2024-06-25 14:25:39,752 INFO    MainThread:22433 [wandb_init.py:init():614] setting up manager
+2024-06-25 14:25:39,753 INFO    MainThread:22433 [backend.py:_multiprocessing_setup():105] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-06-25 14:25:39,754 INFO    MainThread:22433 [wandb_init.py:init():622] backend started and connected
+2024-06-25 14:25:39,756 INFO    MainThread:22433 [wandb_init.py:init():711] updated telemetry
+2024-06-25 14:25:39,760 INFO    MainThread:22433 [wandb_init.py:init():744] communicating run to backend with 90.0 second timeout
+2024-06-25 14:25:39,969 INFO    MainThread:22433 [wandb_run.py:_on_init():2402] communicating current version
+2024-06-25 14:25:39,994 INFO    MainThread:22433 [wandb_run.py:_on_init():2411] got version response upgrade_message: "wandb version 0.17.3 is available!  To upgrade, please run:\n $ pip install wandb --upgrade"
+
+2024-06-25 14:25:39,995 INFO    MainThread:22433 [wandb_init.py:init():795] starting run threads in backend
+2024-06-25 14:25:41,336 INFO    MainThread:22433 [wandb_run.py:_console_start():2380] atexit reg
+2024-06-25 14:25:41,336 INFO    MainThread:22433 [wandb_run.py:_redirect():2235] redirect: wrap_raw
+2024-06-25 14:25:41,336 INFO    MainThread:22433 [wandb_run.py:_redirect():2300] Wrapping output streams.
+2024-06-25 14:25:41,336 INFO    MainThread:22433 [wandb_run.py:_redirect():2325] Redirects installed.
+2024-06-25 14:25:41,337 INFO    MainThread:22433 [wandb_init.py:init():838] run started, returning control to user process
+2024-06-25 14:25:41,337 INFO    MainThread:22433 [wandb_run.py:_tensorboard_callback():1544] tensorboard callback: runs/CartPole-v1__ppo__1__1719339938, True
+2024-06-25 14:25:52,530 WARNING MsgRouterThr:22433 [router.py:message_loop():77] message_loop has been closed
